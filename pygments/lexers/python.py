@@ -72,7 +72,7 @@ class PythonLexer(RegexLexer):
              '[hlL]?[E-GXc-giorsaux%]', String.Interpol),
             # the new style '{}'.format(...) string formatting
             (r'\{'
-             r'((\w+)((\.\w+)|(\[[^\]]+\]))*)?'  # field name
+             r'(([\w()]+)((\.[\w()]+)|(\[[^\]]+\]))*)?'  # field name
              r'(\![sra])?'                       # conversion
              r'(\:(.?[<>=\^])?[-+ ]?#?0?(\d+)?,?(\.\d+)?[E-GXb-gnosx%]?)?'
              r'\}', String.Interpol),
